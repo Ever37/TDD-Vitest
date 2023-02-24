@@ -1,25 +1,11 @@
 import { describe, expect, it } from 'vitest';
-
-/*
-Escribir una función que al pasarle un número:
-  - Muestra "fizz" si es múltiplo de 3.
-  - Muestra "buzz" si es múltiplo de 5.
-  - Muestra "fizzbuzz" si es múltiplo de 3 y 5.
-  - Muestra el número si no es múltiplo de nínguno de los anteriores.
-*/
-
-const fizzbuzz = (number): number | 'fizz' => {
-  if (typeof number !== 'number') throw new Error('parameter provided must be a number');
-  if (Number.isNaN(number)) throw new Error('parameter provided must be a number');
-
-  if (number === 3) return 'fizz';
-  return number;
-}
+import { fizzbuzz } from '../src/fizzbuzz.js';
 
 describe('fizzbuzz', (): void => {
-  it('should be a function', (): void => {
-    expect(typeof fizzbuzz).toBe('function');
-  })
+  // Already not necessary, cover in other tests
+  // it('should be a function', (): void => {
+  //   expect(typeof fizzbuzz).toBe('function');
+  // })
 
   it('should throw if not number is provided as parameter', (): void => {
     expect((): number => fizzbuzz()).toThrow();
@@ -43,6 +29,26 @@ describe('fizzbuzz', (): void => {
 
   it('should return "fizz" if number provided is 3', (): void => {
     expect(fizzbuzz(3)).toBe('fizz');
+  })
+
+  it('should return "fizz" if number provided is multiple of 3', (): void => {
+    expect(fizzbuzz(6)).toBe('fizz');
+    expect(fizzbuzz(9)).toBe('fizz');
+    expect(fizzbuzz(12)).toBe('fizz');
+  })
+
+  it('should return "buzz" if number provided is 5', (): void => {
+    expect(fizzbuzz(5)).toBe('buzz');
+  })
+
+  it('should return "buzz" if number provided is multiple of 5', (): void => {
+    expect(fizzbuzz(10)).toBe('buzz');
+    // expect(fizzbuzz(15)).toBe('buzz'); multiple of 3 and 5
+    expect(fizzbuzz(20)).toBe('buzz');
+  })
+
+  it('should return "fizzbuzz" if number provided is multiple of 3 and 5', (): void => {
+    expect(fizzbuzz(15)).toBe('fizzbuzz');
   })
 
 })
