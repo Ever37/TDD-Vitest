@@ -1,3 +1,5 @@
+## Based on https://www.youtube.com/watch?v=_t9l2TwGioc&t=4565s
+## Test Driven Development Course from Scratch with JavaScript, React and Vitest
 ### https://vitest.dev/guide/
 
 - mkdir aprende-tdd
