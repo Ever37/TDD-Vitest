@@ -1,7 +1,12 @@
 {
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitest/coverage-c8": "^0.29.1",
+    "@vitest/coverage-istanbul": "^0.29.1",
+    "happy-dom": "^8.9.0",
     "standard": "^17.0.0",
-    "vitest": "^0.28.5"
+    "vitest": "^0.29.1"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
@@ -35,6 +40,7 @@
     "jsonc-parser": "^3.2.0",
     "local-pkg": "^0.4.3",
     "loupe": "^2.3.6",
+    "mathjs": "^11.6.0",
     "mlly": "^1.1.1",
     "ms": "^2.1.2",
     "nanoid": "^3.3.4",
@@ -46,6 +52,8 @@
     "pkg-types": "^1.0.2",
     "postcss": "^8.4.21",
     "pretty-format": "^27.5.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-is": "^17.0.2",
     "resolve": "^1.22.1",
     "rollup": "^3.17.2",
@@ -71,6 +79,7 @@
     "yocto-queue": "^1.0.0"
   },
   "scripts": {
+    "dev": "vite",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
